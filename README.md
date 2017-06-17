@@ -7,9 +7,12 @@
 	* [Project Objectives](#what-students-should-learn-from-this-project)
 	* [Resources](#resources)
 	* [Project Requirements](#project-requirements)
-* [**Project Breakdown**](#project-breakdown)
-* [**Contributing**](#contributing)
+* [**Project**](#project)
+	* [**Task list**](#task-list)
+	* [**Status**](#status)
 * [**Team**](#team)
+* [**Credits**](#credits)
+
 ---
 [![Stories in Ready](https://badge.waffle.io/yeungegs/holbertonschool_big-o.png?label=ready&title=Ready)](https://waffle.io/yeungegs/holbertonschool_big-o?utm_source=badge) [![Throughput Graph](https://graphs.waffle.io/yeungegs/holbertonschool_big-o/throughput.svg)](https://waffle.io/yeungegs/holbertonschool_big-o/metrics/throughput)
 
@@ -47,12 +50,16 @@ At the end of this project you are expected to be able to explain to anyone, wit
 - Don't forget to push your header file
 - All your header files should be include guarded
 
-## Project Breakdown
+## Project 
+
+### Task list
  Task # | Type | Short description | File name and link |
  ---: | --- | --- | --- |
  | **Mandatory** | | |
  | ***Advanced***| | |
  | ***Advanced***| | |
+ 
+### Status 
 
 ## Team
 [![Carrie Ybay](https://avatars0.githubusercontent.com/u/22947629?v=3&s=230)](https://github.com/hicarrie) | [![Elaine Yeung](https://avatars3.githubusercontent.com/u/23224088?v=3&s=230)](https://github.com/yeungegs)
