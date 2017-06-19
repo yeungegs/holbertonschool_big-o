@@ -10,11 +10,15 @@
 void bubble_sort(int *array, size_t size)
 {
 	bool swapped;
-	size_t i;
+	int i;
 	int temp;
-	size_t iter;
+	int iter = size - 1;
 
-	iter = size - 1;
+	if (size == 0 || array == NULL)
+	{
+		print_array(array, size);
+		return;
+	}
 	do {
 		swapped = false;
 		i = 0;
