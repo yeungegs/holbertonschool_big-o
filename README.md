@@ -14,7 +14,6 @@
 * [**Credits**](#credits)
 
 ---
-[![Stories in Ready](https://badge.waffle.io/yeungegs/holbertonschool_big-o.png?label=ready&title=Ready)](https://waffle.io/yeungegs/holbertonschool_big-o?utm_source=badge) [![Throughput Graph](https://graphs.waffle.io/yeungegs/holbertonschool_big-o/throughput.svg)](https://waffle.io/yeungegs/holbertonschool_big-o/metrics/throughput)
 
 ## Project Details
 
@@ -22,15 +21,15 @@
 This project introduces concepts of data structures and algorithms in programming. It is meant to be done by groups of two students. Each group of two should pair program for at least the mandatory part.
 
 ### What students should learn from this project
-At the end of this project you are expected to be able to explain to anyone, without the help of Google:
+At the end of this project students are expected to be able to explain to anyone, without the help of Google:
 - At least four different sorting algorithms
 - What is the Big O notation, and how to evaluate the time complexity of an algorithm
 - How to select the best sorting algorithm for a given input
 - What is a stable sorting algorithm
 
 ### Resources
-- [Exercises](https://github.com/yeungegs/kochan-c-exercises/tree/master/chapter-11) from Chapter 11 - "Operations on Bits" from [Stephen Kochan's  book "Programming in C"](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=kochan+programming+in+c&*) pages 278 - 285 
-- WikiHow article for [how to convert from binary to decimal](http://www.wikihow.com/Convert-from-Binary-to-Decimal)
+- 
+- 
 
 ### Project Requirements
 - Allowed editors: `vi`, `vim`, `emacs`
@@ -43,12 +42,98 @@ At the end of this project you are expected to be able to explain to anyone, wit
 - Your code should use the `Betty` style. It will be checked using [`betty-style.pl`](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl) and [`betty-doc.pl`](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl)
 - You are not allowed to use global variables
 - No more than 5 functions per file
-- The only C standard library functions allowed are `malloc`, `free` and `exit`. Any use of functions like `printf`, `puts`, `calloc`, `realloc` etc... is forbidden
-- You are allowed to use [`_putchar`](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c)
-- You don't have to push `_putchar.c`, we will use our file. If you do it won't be taken into account
-- The prototypes of all your functions and the prototype of the function `_putchar` should be included in your header file called [`holberton.h`](./holberton.h)
+- Unless specified otherwise, you are not allowed to use the standard library. Any use of functions like printf, puts, ... is totally forbidden.
+- In the following examples, the `main.c` files are showed as examples. You can use them to test your functions, but you don't have to push them to your repo (if you do we won't take them into account). We will use our own `main.c` files at compilation. Our `main.c` files might be different from the one showed in the examples
+- The prototypes of all your functions should be included in your header file called [`sort.h`](./sort.h)
 - Don't forget to push your header file
 - All your header files should be include guarded
+- A list/array does not need to be sorted if its size is less than 2.
+- For this project you are given the following `print_array`, and `print_list` functions:
+
+```C
+#include <stdlib.h>
+#include <stdio.h>
+
+/**
+ * print_array - Prints an array of integers
+ *
+ * @array: The array to be printed
+ * @size: Number of elements in @array
+ */
+
+void print_array(const int *array, size_t size)
+{
+	size_t i;
+
+	i = 0;
+	while (array && i < size)
+	{
+		if (i > 0)
+			printf(", ");
+		printf("%d", array[i]);
+		++i;
+	}
+	printf("\n");
+}
+```
+
+
+```C
+#include <stdio.h>
+#include "sort.h"
+
+/**
+ * print_list - Prints a list of integers
+ *
+ * @list: The list to be printed
+ */
+
+void print_list(const listint_t *list)
+{
+	int i;
+
+	i = 0;
+	while (list)
+	{
+		if (i > 0)
+			printf(", ");
+		printf("%d", list->n);
+		++i;
+		list = list->next;
+	}
+	printf("\n");
+}
+```
+- Our files `print_array.c` and `print_list.c` (containing the `print_array` and `print_list` functions) will be compiled with your functions during the correction.
+- Please declare the prototype of the functions `print_array` and `print_list` in your `sort.h` header file
+- Please use the following data structure for doubly linked list:
+
+```C
+/**
+ * struct listint_s - Doubly linked list node
+ *
+ * @n: Integer stored in the node
+ * @next: Pointer to the next element of the list
+ */
+
+typedef struct listint_s
+{
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
+} listint_t;
+```
+
+For almost all sorting algorithms you will have to work on, you will be asked to write a file containing the big O notation of the time complexity of the algorithm. Please use this format:
+
+- `O(1)`
+- `O(n)`
+- `O(n!)`
+- n square -> `O(n^2)`
+- log(n) -> `O(log(n))`
+- n * log(n) -> `O(nlog(n))`
+- ...
+- Please use the "short" notation (don't use constants). Example: `O(nk)` or `O(wn)` should be written `O(n)`. All your answers files must have an empty line at the end.
 
 ## Project 
 
@@ -60,6 +145,7 @@ At the end of this project you are expected to be able to explain to anyone, wit
  | ***Advanced***| | |
  
 ### Status 
+[![Stories in Ready](https://badge.waffle.io/yeungegs/holbertonschool_big-o.png?label=ready&title=Ready)](https://waffle.io/yeungegs/holbertonschool_big-o?utm_source=badge) [![Throughput Graph](https://graphs.waffle.io/yeungegs/holbertonschool_big-o/throughput.svg)](https://waffle.io/yeungegs/holbertonschool_big-o/metrics/throughput)
 
 ## Team
 [![Carrie Ybay](https://avatars0.githubusercontent.com/u/22947629?v=3&s=230)](https://github.com/hicarrie) | [![Elaine Yeung](https://avatars3.githubusercontent.com/u/23224088?v=3&s=230)](https://github.com/yeungegs)
