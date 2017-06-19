@@ -31,6 +31,7 @@ At the end of this project students are expected to be able to explain to anyone
 - Resources from Holberton
   - Read [Sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm), [Big O notation](http://stackoverflow.com/questions/487258/what-is-a-plain-english-explanation-of-big-o-notation).
   - Watch [15 sorting algorithms in 6 minutes](https://www.youtube.com/watch?v=kPRA0W1kECg), [Sorting algorithms animations](https://www.toptal.com/developers/sorting-algorithms)
+  - Here is a quick tip to help you test your sorting algorithms with big sets of random integers: [Random.org](https://www.random.org/integer-sets/)
 - Other resources independently discovered
   - [e-lectures from VisuAlgo](https://visualgo.net/en/sorting?slide=5)
 
@@ -143,9 +144,29 @@ For almost all sorting algorithms you will have to work on, you will be asked to
 ### Task list
  Task # | Type | Short description | File name and link |
  ---: | --- | --- | --- |
- | **Mandatory** | | |
- | ***Advanced***| | |
- | ***Advanced***| | |
+0 | **Mandatory** |Write a function that sorts an array of integers in ascending order using the [Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort) algorithm <p>Write a function that sorts an array of integers in ascending order using the <a href="https://en.wikipedia.org/wiki/Bubble_sort">Bubble sort</a> algorithm</p><li>Prototype: <code>void bubble_sort(int *array, size_t size);</code></li><li>You&#39;re expected to print the <code>array</code> after each time you swap two elements (See example below)</li><p>Write in the file <code>0-O</code>, the big O notations of the time complexity of the Bubble sort algorithm, with 1 notation per line:</p><li>in the best case</li><li>in the average case</li><li>in the worst case</li>  <p><iframe width="560" height="315" src="https://www.youtube.com/embed/ROalU379l3U" frameborder="0" allowfullscreen></iframe><br />| |
+1 | **Mandatory** | | |
+2 | **Mandatory** | | |
+3 | **Mandatory** | | |
+4 | **Mandatory** | | |
+5 | **Mandatory** | | |
+6 | **Mandatory** | | |
+7 | **Mandatory** | | |
+8 | **Mandatory** | | |
+9 | **Mandatory** | | |
+10 | **Mandatory** | | |
+11 | **Mandatory** | | |
+12 | **Mandatory** | | |
+13 | **Mandatory** | | |
+14 | **Mandatory** | | |
+15 | **Mandatory** | | |
+16 | **Mandatory** | | |
+17 | **Mandatory** | | |
+18 | **Mandatory** | | |
+19 | **Mandatory** | | |
+20 | **Mandatory** | | |
+21 | **Mandatory** | | |
+22 | ***Advanced***| | |
  
 ### Status 
 [![Stories in Ready](https://badge.waffle.io/yeungegs/holbertonschool_big-o.png?label=ready&title=Ready)](https://waffle.io/yeungegs/holbertonschool_big-o?utm_source=badge) [![Throughput Graph](https://graphs.waffle.io/yeungegs/holbertonschool_big-o/throughput.svg)](https://waffle.io/yeungegs/holbertonschool_big-o/metrics/throughput)
