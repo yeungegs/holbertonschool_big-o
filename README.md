@@ -28,8 +28,11 @@ At the end of this project students are expected to be able to explain to anyone
 - What is a stable sorting algorithm
 
 ### Resources
-- 
-- 
+- Resources from Holberton
+  - Read [Sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm), [Big O notation](http://stackoverflow.com/questions/487258/what-is-a-plain-english-explanation-of-big-o-notation).
+  - Watch [15 sorting algorithms in 6 minutes](https://www.youtube.com/watch?v=kPRA0W1kECg), [Sorting algorithms animations](https://www.toptal.com/developers/sorting-algorithms)
+- Other resources independently discovered
+  - [e-lectures from VisuAlgo](https://visualgo.net/en/sorting?slide=5)
 
 ### Project Requirements
 - Allowed editors: `vi`, `vim`, `emacs`
