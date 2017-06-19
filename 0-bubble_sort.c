@@ -10,10 +10,11 @@
 void bubble_sort(int *array, size_t size)
 {
 	bool swapped;
-	int i;
+	size_t i;
 	int temp;
-	int iter = size - 1;
+	size_t iter;
 
+	iter = size - 1;
 	do {
 		swapped = false;
 		i = 0;
