@@ -10,14 +10,19 @@
 void quick_sort(int *array, size_t size)
 {
 	int p;
+	int low;
+	int high;
 
-	if (size > 0)
+	low = 0;
+	high = size - 1;
+
+	if (low < high)
 	{
-		p = partition(array, size);
+		p = partition(array, low, high, size);
 		puts("before q_s lo");
 		quick_sort(array, p);
 		puts("before q_s hi");
-		quick_sort(array, size - (p + 1));
+		quick_sort(array, size - p);
 	}
 }
 
@@ -27,18 +32,16 @@ void quick_sort(int *array, size_t size)
  * @size: size of array
  * Return: position of pivot in array
  */
-int partition(int *array, size_t size)
+int partition(int *array, int low, int high, size_t size)
 {
 	int pivot;
 	int i;
 	int j;
-	int high;
 
-	pivot = array[size - 1];
-	i = -1;
-	high = size - 1;
+	pivot = array[high];
+	i = low - 1;
 
-	for (j = 0; j <= high; j++)
+	for (j = low; j <= high; j++)
 	{
 		if (array[j] <= pivot)
 		{
@@ -46,12 +49,14 @@ int partition(int *array, size_t size)
 			if (i != j)
 			{
 				swap(array, i, j);
+				puts("PRINT ARRAY:");
 				print_array(array, size);
+				puts("");
 			}
 		}
 	}
 	return (i);
-
+}
 
 /**
  * swap - swap values in array
