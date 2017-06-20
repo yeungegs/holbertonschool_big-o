@@ -30,17 +30,27 @@ int partition(int *array, size_t size)
 	int pivot;
 	int i;
 	int j;
+	int high;
 
 	pivot = array[size - 1];
 	i = -1;
+	high = size - 1;
 
-	for (j = 0; j <= (size - 1); j++)
+	for (j = 0; j <= high; j++)
 	{
+		puts("before if statement");
 		if (array[j] <= pivot)
 		{
+		puts("before i++");
 			i++;
 			if (i != j)
+			{
+				puts("before swap");
 				swap(array, i, j);
+				puts("after swap");
+				print_array(array, size);
+				puts("after print array");
+			}
 		}
 	}
 	return (i);
