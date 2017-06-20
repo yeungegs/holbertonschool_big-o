@@ -13,7 +13,6 @@ void quick_sort(int *array, size_t size)
 
 	if (size > 0)
 	{
-		puts("before partition");
 		p = partition(array, size);
 		puts("before q_s lo");
 		quick_sort(array, p);
@@ -41,23 +40,18 @@ int partition(int *array, size_t size)
 
 	for (j = 0; j <= high; j++)
 	{
-		puts("before if statement");
 		if (array[j] <= pivot)
 		{
-		puts("before i++");
 			i++;
 			if (i != j)
 			{
-				puts("before swap");
 				swap(array, i, j);
-				puts("after swap");
 				print_array(array, size);
-				puts("after print array");
 			}
 		}
 	}
 	return (i);
-}
+
 
 /**
  * swap - swap values in array
