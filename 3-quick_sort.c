@@ -13,8 +13,11 @@ void quick_sort(int *array, size_t size)
 
 	if (size > 0)
 	{
+		puts("before partition");
 		p = partition(array, size);
-		quick_sort(array, p - 1);
+		puts("before q_s lo");
+		quick_sort(array, p);
+		puts("before q_s hi");
 		quick_sort(array, size - (p + 1));
 	}
 }
