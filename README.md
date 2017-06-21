@@ -34,6 +34,10 @@ At the end of this project students are expected to be able to explain to anyone
   - Here is a quick tip to help you test your sorting algorithms with big sets of random integers: [Random.org](https://www.random.org/integer-sets/)
 - Other resources independently discovered
   - [e-lectures from VisuAlgo](https://visualgo.net/en/sorting?slide=5)
+  - [Time Complexity](https://wiki.python.org/moin/TimeComplexity) from official Python documentation
+  - [CS 5050 Handout](http://digital.cs.usu.edu/~allanv/cs5050/W2Handout.pdf)
+  - [Determining the Complexity of Algorithm (the basic part)](https://philipstel.wordpress.com/2011/03/07/determining-the-complexity-of-an-algorithm-the-basic-part/)
+	- 
 
 ### Project Requirements
 - Allowed editors: `vi`, `vim`, `emacs`
