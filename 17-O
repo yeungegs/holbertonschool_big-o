@@ -1,0 +1,5 @@
+O(1) access
+O(n) insert
+O(n) remove
+O(n) search
+O(1) set
