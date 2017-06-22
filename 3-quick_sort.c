@@ -9,26 +9,42 @@
 
 void quick_sort(int *array, size_t size)
 {
-	int p;
 	int low;
 	int high;
+
+	if (array == NULL || size == 0)
+		return;
 
 	low = 0;
 	high = size - 1;
 
+	my_sort(array, low, high, size);
+}
+
+/**
+ * my_sort - sorts array using low / high positions
+ * @array: list of numbers
+ * @low: first index of array
+ * @high: last index of array
+ * @size: size of array
+ */
+void my_sort(int *array, int low, int high, size_t size)
+{
+	int p;
+
 	if (low < high)
 	{
 		p = partition(array, low, high, size);
-		puts("before q_s lo");
-		quick_sort(array, p);
-		puts("before q_s hi");
-		quick_sort(array, size - p);
+		my_sort(array, low, p - 1, size);
+		my_sort(array, p + 1, high, size);
 	}
 }
 
 /**
  * partition - sections an array using Lomuto quick_sort algo
  * @array: list of integers
+ * @low: first index of array
+ * @high: lowest index of array
  * @size: size of array
  * Return: position of pivot in array
  */
@@ -49,9 +65,7 @@ int partition(int *array, int low, int high, size_t size)
 			if (i != j)
 			{
 				swap(array, i, j);
-				puts("PRINT ARRAY:");
 				print_array(array, size);
-				puts("");
 			}
 		}
 	}
