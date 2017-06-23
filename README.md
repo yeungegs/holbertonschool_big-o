@@ -152,7 +152,7 @@ For almost all sorting algorithms you will have to work on, you will be asked to
 1 | **Mandatory** | |Write a function that sorts a doubly linked list of integers in ascending order using the <a href="https://en.wikipedia.org/wiki/Insertion_sort">Insertion sort</a> algorithm</p><li>Prototype: <code>void insertion_sort_list(listint_t **list);</code></li><li>You are not allowed to modify the integer <code>n</code> of a node. You have to swap the nodes themselves.</li><li>You&#39;re expected to print the <code>list</code> after each time you swap two elements (See example below)</li><p>Write in the file <code>1-O</code>, the big O notations of the time complexity of the Insertion sort algorithm, with 1 notation per line:</p><li>in the best case</li><li>in the average case</li><li>in the worst case</li>  |
 2 | **Mandatory** | |Write a function that sorts an array of integers in ascending order using the <a href="https://en.wikipedia.org/wiki/Selection_sort">Selection sort</a> algorithm</p><li>Prototype: <code>void selection_sort(int *array, size_t size);</code></li><li>You&#39;re expected to print the <code>array</code> after each time you swap two elements (See example below)</li><p>Write in the file <code>2-O</code>, the big O notations of the time complexity of the Selection sort algorithm, with 1 notation per line:</p><li>in the best case</li><li>in the average case</li><li>in the worst case</li> |
 3 | **Mandatory** | |Write a function that sorts an array of integers in ascending order using the <a href="https://en.wikipedia.org/wiki/Quicksort">Quick sort</a> algorithm</p><li>Prototype: <code>void quick_sort(int *array, size_t size);</code></li><li>You must implement the <code>Lomuto</code> partition scheme.</li><li>The pivot should always be the last element of the partition being sorted.</li><li>You&#39;re expected to print the <code>array</code> after each time you swap two elements (See example below)</li><p>Write in the file <code>3-O</code>, the big O notations of the time complexity of the Quick sort algorithm, with 1 notation per line:</p><li>in the best case</li><li>in the average case</li><li>in the worst case</li> |
-4 | **Mandatory** | |What is the time complexity of this function / algorithm? <br>`void f(int n)`<br>`{`<br>`    int i;`<br><br>`    for (i = 0; i &lt; n; i++)`<br>`    {`<br>`        printf(&quot;[%d]\n&quot;, i);`<br>`    }`<br>`}`<br>|
+4 | **Mandatory** | |What is the time complexity of this function / algorithm? |
 5 | **Mandatory** | |What is the time complexity of this function / algorithm? |
 6 | **Mandatory** | |What is the time complexity of this function / algorithm? |
 7 | **Mandatory** | |What is the time complexity of this function / algorithm? |
@@ -163,16 +163,119 @@ For almost all sorting algorithms you will have to work on, you will be asked to
 12 | **Mandatory** | |What is the time complexity of this function / algorithm? |
 13 | **Mandatory** | |What is the time complexity of this function / algorithm? |
 14 | **Mandatory** | |What is the time complexity of this function / algorithm? |
-15 | **Mandatory** | |<p>What are the time complexities of those operations on an unsorted array (one answer per line):</p><li>Accessing the nth element</li><li>Inserting at index n</li><li>Removing at index n</li><li>Searching for an element in an array of size n</li><li>Setting value at index n</li>                                                                                                                                                                                                                         |
-16 | **Mandatory** | |<p>What are the time complexities of those operations on a singly linked list (one answer per line):</p><li>Accessing the nth element</li><li>Inserting after the nth element (Considering you have a pointer to the node to insert)</li><li>Removing the nth element (Considering you have a pointer to the node to remove)</li><li>Searching for an element in a linked list of size n</li><li>Setting the value of the nth element (Considering you have a pointer to the node to set the value of)</li>      |
-17 | **Mandatory** | |<p>What are the time complexities of those operations on a doubly linked list (one answer per line):</p><li>Accessing the nth element</li><li>Inserting after the nth element (Considering you have a pointer to the node to insert)</li><li>Removing the nth element (Considering you have a pointer to the node to remove)</li><li>Searching for an element in a linked list of size n</li><li>Setting the value of the nth element (Considering you have a pointer to the node to set the value of)</li>      |
-18 | **Mandatory** | |<p>What are the time complexities of those operations on an unsorted Python 3 list (one answer per line):</p><li>Accessing the nth element</li><li>Inserting at index n</li><li>Removing at index n</li><li>Searching for an element in a Python list of size n</li><li>Setting value at index n</li>                                                                                                                                                                                                            |
-19 | **Mandatory** | |<p>What are the time complexities of those operations on a stack (one answer per line):</p><li>push</li><li>pop</li><li>Searching for an element in a stack of size n</li>                                                                                                                                                                                                                                                                                                                                       |
-20 | **Mandatory** | |<p>What are the time complexities of those operations on a queue (one answer per line):</p><li>push</li><li>pop</li><li>Searching for an element in a queue of size n</li>                                                                                                                                                                                                                                                                                                                                       |
-21 | **Mandatory** | |<p>What are the time complexities of those operations on a hash table (one answer per line) - with the implementation you used during the previous Hash Table C project (chaining):</p><li>Searching for an element, best case</li><li>Searching for an element, worst case</li><li>Insertion, best case</li><li>Insertion, worst case</li><li>Deletion, best case</li><li>Deletion, worst case</li>                                                                                                             |
+15 | **Mandatory** | |<p>What are the time complexities of those operations on an unsorted array (one answer per line):</p><li>Accessing the nth element</li><li>Inserting at index n</li><li>Removing at index n</li><li>Searching for an element in an array of size n</li><li>Setting value at index n</li>|
+16 | **Mandatory** | |<p>What are the time complexities of those operations on a singly linked list (one answer per line):</p><li>Accessing the nth element</li><li>Inserting after the nth element (Considering you have a pointer to the node to insert)</li><li>Removing the nth element (Considering you have a pointer to the node to remove)</li><li>Searching for an element in a linked list of size n</li><li>Setting the value of the nth element (Considering you have a pointer to the node to set the value of)</li> |
+17 | **Mandatory** | |<p>What are the time complexities of those operations on a doubly linked list (one answer per line):</p><li>Accessing the nth element</li><li>Inserting after the nth element (Considering you have a pointer to the node to insert)</li><li>Removing the nth element (Considering you have a pointer to the node to remove)</li><li>Searching for an element in a linked list of size n</li><li>Setting the value of the nth element (Considering you have a pointer to the node to set the value of)</li> |
+18 | **Mandatory** | |<p>What are the time complexities of those operations on an unsorted Python 3 list (one answer per line):</p><li>Accessing the nth element</li><li>Inserting at index n</li><li>Removing at index n</li><li>Searching for an element in a Python list of size n</li><li>Setting value at index n</li>|
+19 | **Mandatory** | |<p>What are the time complexities of those operations on a stack (one answer per line):</p><li>push</li><li>pop</li><li>Searching for an element in a stack of size n</li> |
+20 | **Mandatory** | |<p>What are the time complexities of those operations on a queue (one answer per line):</p><li>push</li><li>pop</li><li>Searching for an element in a queue of size n</li> |
+21 | **Mandatory** | |<p>What are the time complexities of those operations on a hash table (one answer per line) - with the implementation you used during the previous Hash Table C project (chaining):</p><li>Searching for an element, best case</li><li>Searching for an element, worst case</li><li>Insertion, best case</li><li>Insertion, worst case</li><li>Deletion, best case</li><li>Deletion, worst case</li> |
 21 | **Mandatory** | | |
 22 | ***Advanced***| | |
- 
+
+#### Time complexity problems
+##### Task 4 
+
+``` C
+void f(int n)
+{
+    printf("n = %d\n", n);
+}	
+```
+
+##### Task 5 
+
+``` C
+void f(int n)
+{
+    int i;
+	
+	for (i = 0; i < n; i++)
+	{
+		printf("[%d]\n", i);
+	}
+}
+```
+
+##### Task 6
+
+``` C
+void f(int n)
+{
+    int i;
+	
+	for (i = 0; i < n; i += 98)
+	{
+		printf("[%d]\n", i);
+	}
+}
+```
+
+##### Task 7
+
+``` C
+void f(unsigned int n)
+{
+    int i;
+	
+	for (i = 1; i < n; i = i * 2)
+	{
+		printf("[%d]\n", i);
+	}
+}
+```
+
+##### Task 8
+
+``` C
+var factorial = function(n) {
+    if(n == 0) {
+		return 1
+	} else {
+		return n * factorial(n - 1);
+	}
+}
+```
+
+##### Task 9
+
+``` C
+foreach($numbers as $number)
+{
+    echo $number;
+}
+```
+
+##### Task 10
+
+``` C
+void f(unsigned int n)
+{
+    int i;
+	int j;
+		
+	for (i = 0; i < n; i++)
+	{
+		for (j = 1; j < n; j = j * 2)
+		{
+			printf("[%d] [%d]\n", i, j);
+		}
+	}
+}
+```
+
+##### Task 11
+
+##### Task 12
+##### Task 13
+##### Task 14
+##### Task 15
+##### Task 16
+##### Task 17
+##### Task 18
+##### Task 19
+##### Task 20
+
 ### Status 
 [![Stories in Ready](https://badge.waffle.io/yeungegs/holbertonschool_big-o.png?label=ready&title=Ready)](https://waffle.io/yeungegs/holbertonschool_big-o?utm_source=badge) [![Throughput Graph](https://graphs.waffle.io/yeungegs/holbertonschool_big-o/throughput.svg)](https://waffle.io/yeungegs/holbertonschool_big-o/metrics/throughput)
 
