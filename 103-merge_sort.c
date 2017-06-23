@@ -61,9 +61,9 @@ void merge(int *array, int low, int mid, int high, int *temp)
 
 	printf("Merging...\n");
 	printf("[left]: ");
-	print_array(array, mid);
+	print_array(&array[low], mid + 1);
 	printf("[right]: ");
-	print_array(array, high - mid);
+	print_array(&array[mid + 1], high - mid);
 
 	for (i = low; left <= mid && right <= high; i++)
 	{
@@ -97,7 +97,7 @@ void merge(int *array, int low, int mid, int high, int *temp)
 		array[i] = temp[i];
 
 	printf("[Done]: ");
-	print_array(array, len(array));
+	print_array(temp, i);
 }
 
 /**
