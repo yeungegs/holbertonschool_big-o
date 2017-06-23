@@ -29,6 +29,7 @@ void merge_sort(int *array, size_t size)
  * @array: list of integers
  * @low: first index of array
  * @high: last index of array
+ * @temp: temp array for sorting values
  */
 void sort(int *array, int low, int high, int *temp)
 {
@@ -49,6 +50,7 @@ void sort(int *array, int low, int high, int *temp)
  * @low: first index of array
  * @mid: middle of array
  * @high: last index of array
+ * @temp: temp array for sorting values
  */
 void merge(int *array, int low, int mid, int high, int *temp)
 {
@@ -68,30 +70,16 @@ void merge(int *array, int low, int mid, int high, int *temp)
 	for (i = low; left <= mid && right <= high; i++)
 	{
 		if (array[left] <= array[right])
-		{
-			temp[i] = array[left];
-			left++;
-		}
+			temp[i] = array[left++];
 		else
-		{
-			temp[i] = array[right];
-			right++;
-		}
+			temp[i] = array[right++];
 	}
 
 	while (left <= mid)
-	{
-		temp[i] = array[left];
-		i++;
-		left++;
-	}
+		temp[i++] = array[left++];
 
 	while (right <= high)
-	{
-		temp[i] = array[right];
-		i++;
-		right++;
-	}
+		temp[i++] = array[right++];
 
 	for (i = 0; i <= high; i++)
 		array[i] = temp[i];
