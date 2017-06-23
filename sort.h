@@ -29,5 +29,9 @@ void quick_sort(int *array, size_t size);
 void my_sort(int *array, int low, int high, size_t size);
 int partition(int *array, int low, int high, size_t size);
 void swap(int *array, int i, int j);
+void merge_sort(int *array, size_t size);
+void sort(int *array, int low, int high);
+void merge(int *arrayA, int low, int mid, int high);
+int len(int *array);
 
 #endif /* SORT */
