@@ -10,11 +10,18 @@ void merge_sort(int *array, size_t size)
 {
 	int low;
 	int high;
+	int *temp;
 
 	low = 0;
 	high = size - 1;
 
-	sort(array, low, high);
+	temp = malloc(sizeof(int) * size);
+	if (temp == NULL)
+		return;
+
+	sort(array, low, high, temp);
+
+	free(temp);
 }
 
 /**
@@ -22,32 +29,29 @@ void merge_sort(int *array, size_t size)
  * @array: list of integers
  * @low: first index of array
  * @high: last index of array
- * @size: size of array
  */
-void sort(int *array, int low, int high)
+void sort(int *array, int low, int high, int *temp)
 {
 	int mid;
 
 	if (low < high)
 	{
 		mid = (low + high) / 2;
-		sort(array, low, mid);
-		sort(array, mid + 1, high);
-		merge(array, low, mid, high);
+		sort(array, low, mid, temp);
+		sort(array, mid + 1, high, temp);
+		merge(array, low, mid, high, temp);
 	}
 }
 
 /**
  * merge - merges sorted arrays
- * @arrayA: list of integers
+ * @array: list of integers
  * @low: first index of array
  * @mid: middle of array
  * @high: last index of array
- * @size: size of array
  */
-void merge(int *array, int low, int mid, int high)
+void merge(int *array, int low, int mid, int high, int *temp)
 {
-	int *temp;
 	int left;
 	int right;
 	int i;
@@ -55,20 +59,13 @@ void merge(int *array, int low, int mid, int high)
 	left = low;
 	right = mid + 1;
 
-	if (len(array) > 0)
-	{
-		temp = malloc(sizeof(int) * len(array));
-		if (temp == NULL)
-			return;
-	}
-
 	printf("Merging...\n");
 	printf("[left]: ");
 	print_array(array, mid);
 	printf("[right]: ");
 	print_array(array, high - mid);
 
-	for (i = low; left <= mid && mid <= high; i++)
+	for (i = low; left <= mid && right <= high; i++)
 	{
 		if (array[left] <= array[right])
 		{
@@ -101,13 +98,12 @@ void merge(int *array, int low, int mid, int high)
 
 	printf("[Done]: ");
 	print_array(array, len(array));
-	printf("LENGTH OF ARRAY: %d\n", len(array));
-
-	free(temp);
 }
 
 /**
- *
+ * len - returns length of array
+ * @array: array to evaluate
+ * Return: length of array
  */
 int len(int *array)
 {
@@ -116,5 +112,5 @@ int len(int *array)
 	for (i = 0; array[i] != '\0'; i++)
 		;
 
-	return i;
+	return (i);
 }
