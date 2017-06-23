@@ -22,3 +22,5 @@
 # ignore _putchar.c and a.out
 **/_putchar.c
 **/a.out
+
+print_*.c
