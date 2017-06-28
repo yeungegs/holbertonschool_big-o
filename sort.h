@@ -33,5 +33,8 @@ void merge_sort(int *array, size_t size);
 void sort(int *array, int low, int high, int *temp);
 void merge(int *arrayA, int low, int mid, int high, int *temp);
 int len(int *array);
+void heap_sort(int *array, size_t size);
+void heapify(int *array, size_t size);
+void sift_down(int *array, int low, int high, size_t size);
 
 #endif /* SORT */
